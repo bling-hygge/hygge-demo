@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>React: Template</title>
+    <script src="./package/react.development.js"></script>
+    <script src="./package/react-dom.development.js"></script>
+    <script src="./package/babel.js"></script>
+    <script type="text/babel">
+        // Embedding Expressions in JSX
+        const user = {
+            firstName: 'React',
+            lastName: 'Facebook'
+        };
+
+        // avoid the pitfalls of automatic semicolon insertion: https://stackoverflow.com/questions/2846283/what-are-the-rules-for-javascripts-automatic-semicolon-insertion-asi
+        const element = (<h1>Hello, {formatName(user)}!</h1>);
+        ReactDOM.render(
+            element,
+            document.getElementById('root')
+        );
+
+        function formatName(user) {
+            return user.firstName + ' ' + user.lastName;
+        }
+    </script>
+</head>
+
+<body>
+    <div id="root"></div>
+</body>
+
+</html>

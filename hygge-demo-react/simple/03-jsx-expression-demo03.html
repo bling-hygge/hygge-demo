@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>React: Template</title>
+    <script src="./package/react.development.js"></script>
+    <script src="./package/react-dom.development.js"></script>
+    <script src="./package/babel.js"></script>
+    <script type="text/babel">
+        // Specifying Attributes with JSX
+        // use quotes to specify string literals as attributes
+        const element1 = <a href="https://www.reactjs.org"> link </a>;
+
+        // use curly braces to embed a JavaScript expression in an attribute
+        // Don’t put quotes around curly braces when embedding a JavaScript expression in an attribute
+        // React DOM uses camelCase property naming
+        // For example, class becomes className in JSX, and tabindex becomes tabIndex
+        const element2 = <img src={user.avatarUrl}></img>;
+        ReactDOM.render(
+            element1,
+            document.getElementById('root')
+        );
+    </script>
+</head>
+
+<body>
+    <div id="root"></div>
+</body>
+
+</html>
