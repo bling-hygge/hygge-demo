@@ -1,0 +1,16 @@
+<div id="app">
+    {{message}}
+</div>
+
+<script type="module">
+    import {createApp, ref} from './package/vue.esm-browser.js'
+
+    createApp({
+        setup() {
+            const message = ref('Hello Vue!')
+            return {
+                message
+            }
+        }
+    }).mount('#app')
+</script>

@@ -1,0 +1,16 @@
+<script src="./package/vue.global.js"></script>
+
+<div id="app">{{message}}</div>
+
+<script type="module">
+    const { createApp, ref } = Vue
+
+    createApp({
+        setup() {
+            const message = ref('Hello vue!')
+            return {
+                message
+            }
+        }
+    }).mount('#app')
+</script>
